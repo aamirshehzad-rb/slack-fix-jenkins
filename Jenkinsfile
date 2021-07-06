@@ -2,7 +2,9 @@ pipeline {
   options {
     ansiColor('xterm')
   }
-  agent any
+  agent {
+      label 'edly-ecs-slave-agent'
+  }
   environment {
      BUILD_USER = getBuildUser()
   }
